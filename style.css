@@ -1,8 +1,9 @@
 .container{
-    display: flex;
+    /* display: flex; */
     align-items: center;
     margin: 20%;
-    background-color: azure;
+    background-color:rgb(202, 17, 17)
+    ;
 }
 
 .options{
@@ -14,9 +15,9 @@
 }
 
 .questCont{
-    display: none;
+    display: block;
 }
 
 .resultsCont{
-    display: none;
+    display: block;
 }
