@@ -25,11 +25,11 @@
         </div>
     </div> 
     <!-- Start Button -->
-    <div class="start_btn"><button>Start Quiz</button> </div>
+    <div class="start_btn"><button onclick="startQuiz()">Start Quiz</button> </div>
 </div>
 
 <!--Questions-->
-<div class="questCont container">
+<div id="questCont" class="container">
     <div class="quiz">
         <div class="timer">
             <p>Seconds Left</p> 
@@ -39,24 +39,25 @@
         <div class="questionContainer">
             <div id="question"></div>
             <div class="quesOptions"> 
-                <div class="options"><button id="optionA" onclick="checkAnswerTest('A')"></button></div>
-                <div class="options" ><button id="optionB" onclick="checkAnswerTest('B')"></button></div>
-                <div class="options" ><button id="optionC" onclick="checkAnswerTest('C')"></button></div>
-                <div class="options" ><button id="optionD" onclick="checkAnswerTest('D')"></button></div>
+                <div class="options"><button id="optionA" onclick="checkAnswerResult('A')"></button></div>
+                <div class="options" ><button id="optionB" onclick="checkAnswerResult('B')"></button></div>
+                <div class="options" ><button id="optionC" onclick="checkAnswerResult('C')"></button></div>
+                <div class="options" ><button id="optionD" onclick="checkAnswerResult('D')"></button></div>
             </div> 
+            <div id="answerImg"></div>
         </div>
     </div>
 </div>
 
 
 <!--Results-->
-<div class="resultsCont container">
+<div id="resultsCont" class="container">
     <div class="results">
         <h3>You've completed the quiz!</h3>
-        <p>Your score is <span>1</span> out of 5</p>
-        <img class="completeImg" src="./assets/giphy-complete.webp" alt="https://media.giphy.com/media/HBMCmtsPEUShG/giphy.gif">
+        <p>Your score is <span id="scoreDisplay"></span> out of 5</p>
+        <img id="completeImg" class="completeImg" alt="https://media.giphy.com/media/HBMCmtsPEUShG/giphy.gif">
         <div>
-            <button class="restart">Retake Quiz</button>
+            <button id="restartBtn" class="restart" onclick="restartQuiz()">Retake Quiz</button>
         </div>
     </div>
 </div>

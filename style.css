@@ -11,13 +11,18 @@
 }
 
 .completeImg{
-    display: flexbox;
+    width: 100%;
 }
 
-.questCont{
+#startScreen{
     display: block;
 }
 
-.resultsCont{
-    display: block;
+#questCont{
+    display: none;
 }
+
+#resultsCont{
+    display: none;
+}
+

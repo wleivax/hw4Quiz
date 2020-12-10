@@ -1,9 +1,17 @@
+//UI elements
 var question = document.getElementById("question");
 var optionA = document.getElementById("optionA");
 var optionB = document.getElementById("optionB");
 var optionC = document.getElementById("optionC");
 var optionD = document.getElementById("optionD");
 var currentQuestion = document.getElementById("questionNumber");
+var answerImg = document.getElementById("answerImg");
+var restartBtn = document.getElementById("restartBtn");
+// containers
+var startCont = document.getElementById("startScreen");
+var questCont = document.getElementById("questCont");
+var resultsCont = document.getElementById("resultsCont");
+var completeImg = document.getElementById("completeImg");
 
 
 
@@ -56,6 +64,14 @@ var score = 0;
 
 var totalQuestions = questionsArray.length - 1;
 
+//Function Starts
+function startQuiz(){ 
+    startCont.style.display = "none";
+    questCont.style.display = "block";
+    renderQuestions();
+
+    console.log("startQuiz");
+}
 
 function renderQuestions() {
     question.innerHTML = "<h1>"+questionsArray[index].question+"</h1>";
@@ -76,7 +92,26 @@ function checkAnswer() {
     if (index <= totalQuestions) {
         renderQuestions();
     } else {
-        alert ("Quiz Complete")
+        questCont.style.display = "none";
+        resultsCont.style.display = "block";
+        scoreDisplay.innerHTML = score;
+
+        //Display pass or fail gif
+        if (score >= 3) {
+            completeImg.setAttribute("src", "./assets/giphy-complete.webp");
+        } else {
+            completeImg.setAttribute("src", "./assets/giphy-wrong.webp");            
+        }
+        
+
+        //src="./assets/giphy-complete.webp"
+        //document.getElementsByTagName("H1")[0].setAttribute("class", "democlass");
+
+
+
+
+
+        //alert ("Quiz Complete")
     }
     // if choice matches correct then increase score by one. if it does not match then nothing
     // if () {
@@ -86,11 +121,15 @@ function checkAnswer() {
     // }
 }
 // check answer agaist question arrays
-function checkAnswerTest(answer) {
+function checkAnswerResult(answer) {
     console.log("option coming from html", answer);
     if (answer == questionsArray[index].correct) {
         score++
         //display gif for 1 second
+        // setTimeout(function(){
+        //     console.log("time out test");
+        // },5000); 
+        console.log("outside test");
         //raise score on UI
         console.log("your score is ", score);
         console.log("right answer");
@@ -102,6 +141,13 @@ function checkAnswerTest(answer) {
 
 console.log("score:", score);
 
+//Restart Quiz
+function restartQuiz(){
+    resultsCont.style.display = "none";
+    startCont.style.display = "block";
+    index = 0;
+    score = 0;
+}
 
 //checkAnswerTest("Tokyo");
 
