@@ -69,7 +69,8 @@ function startQuiz(){
     startCont.style.display = "none";
     questCont.style.display = "block";
     renderQuestions();
-
+    //start timer
+    startTimer();
     console.log("startQuiz");
 }
 
@@ -81,6 +82,10 @@ function renderQuestions() {
     optionD.innerHTML = "<p>"+questionsArray[index].choiceD+"</p>";
     currentQuestion.innerHTML = index + 1;
 }
+
+function startTimer() {
+    console.log("timer started")
+  }
 
 renderQuestions();
 
