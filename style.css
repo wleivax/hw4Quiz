@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    align-items: center;
+    margin: 20%;
+    background-color: azure;
+}
+
+.options{
+    font-size: inherit;
+}
+
+.completeImg{
+    display: flexbox;
+}
+
+.questCont{
+    display: none;
+}
+
+.resultsCont{
+    display: none;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz HW4</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+<div class="container">
+        <div id="home">
+            <h1> Are you ready?</h1>
+        </div>
+    
+
+    <!-- Quiz Rules -->
+    <div class="info_box">
+        <div class="info_title">
+            <h1>Rules</h1>
+            <ul>
+                <li>Quiz time limit 90 seconds</li>
+                <li>Answer 5 multiple choice questions</li>
+                <li>Save user initials to best scores list</li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <!-- Start Button -->
+    <div class="start_btn"><button>Start Quiz</button> </div>
+
+   
+
+</div>
+
+<!--Quiz-->
+    
+<div class="questCont">
+ <div class="quiz">
+  <header>
+    <div class="timer">seconds left 
+        <div class="timerSecondsLeft">90</div>
+    </div>
+  </header>
+  <section>
+     <div class="question">
+     <!-- <h1>What is the capital of Japan?</h1> -->
+     </div>
+     <div class="quesOptions">
+     <!--  
+      <div class="options"><button>Tokyo</button></div>
+      <div class="options"><button>Kyoto</button></div>
+      <div class="options"><button>Taiwan</button></div>
+      <div class="options"><button>Beijing</button></div>
+     -->
+     </div> 
+  </section>
+
+  
+  <!--Quiz Footer-->
+  <footer>
+     <div class="questionNumber">
+         <p>Question <span>1</span> of 5</p>
+     </div>
+     <button class="nextBtn">Next</button>
+  </footer>
+
+ </div>
+</div>
+
+
+<!--Results-->
+<div class="resultsCont">
+    <div class="results">
+        <div>You've completed the quiz!</div>
+        <div>Your score is <span>1</span> out of 5</div>
+        <img class="completeImg" src="./giphy-complete.webp" alt="https://media.giphy.com/media/HBMCmtsPEUShG/giphy.gif">
+        <div>
+        <button class="restart">Retake Quiz</button>
+        </div>
+    </div>
+
+</div>
+
+
+ <script src="./script.js"></script>
+    
+</body>
+</html>
