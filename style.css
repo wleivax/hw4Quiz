@@ -1,28 +1,33 @@
-.container{
-    /* display: flex; */
-    align-items: center;
-    margin: 20%;
-    background-color:rgb(202, 17, 17)
-    ;
+.container {
+  /* display: flex; */
+  align-items: center;
+  margin: 20%;
+  background-color: rgb(10, 168, 168);
 }
 
-.options{
-    font-size: inherit;
+.options {
+  font-size: inherit;
+  width: 200px;
 }
 
-.completeImg{
-    width: 100%;
+.completeImg {
+  width: 100%;
+  padding-bottom: 20px;
 }
 
-#startScreen{
-    display: block;
+#startScreen {
+  display: block;
 }
 
-#questCont{
-    display: none;
+#questCont {
+  display: none;
 }
 
-#resultsCont{
-    display: none;
+#resultsCont {
+  display: none;
 }
 
+.optionBtn {
+  width: 100%;
+  padding: 10px;
+}

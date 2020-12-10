@@ -1,69 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz HW4</title>
-
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-<!-- <div id="global" class="container">   -->
-<div id="startScreen" class="container">
-    <div id="home">
-        <h1> Are you ready?</h1>
-    </div>
-    <!-- Quiz Rules -->
-    <div class="info_box">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- <div id="global" class="container">   -->
+    <div id="startScreen" class="container">
+      <div id="home">
+        <h1>Are you ready?</h1>
+      </div>
+      <!-- Quiz Rules -->
+      <div class="info_box">
         <div class="info_title">
-            <h1>Rules</h1>
-            <ul>
-                <li>Quiz time limit 90 seconds</li>
-                <li>Answer 5 multiple choice questions</li>
-                <li>Save user initials to best scores list</li>
-            </ul>
+          <h1>Rules</h1>
+          <ul>
+            <li>Quiz time limit 90 seconds</li>
+            <li>Answer 5 multiple choice questions</li>
+            <li>Save user initials to best scores list</li>
+          </ul>
         </div>
-    </div> 
-    <!-- Start Button -->
-    <div class="start_btn"><button onclick="startQuiz()">Start Quiz</button> </div>
-</div>
+      </div>
+      <!-- Start Button -->
+      <div class="start_btn btn btn-default">
+        <button onclick="startQuiz()">Start Quiz</button>
+      </div>
+    </div>
 
-<!--Questions-->
-<div id="questCont" class="container">
-    <div class="quiz">
+    <!--Questions-->
+    <div id="questCont" class="container">
+      <div class="quiz">
         <div class="timer">
-            <p>Seconds Left</p> 
-            <p class="timerSecondsLeft">90</p>
-            <p>Question <span id="questionNumber"></span> out of 5</p>
+          <p>Seconds Left</p>
+          <p class="timerSecondsLeft">90</p>
+          <p>Question <span id="questionNumber"></span> out of 5</p>
         </div>
         <div class="questionContainer">
-            <div id="question"></div>
-            <div class="quesOptions"> 
-                <div class="options"><button id="optionA" onclick="checkAnswerResult('A')"></button></div>
-                <div class="options" ><button id="optionB" onclick="checkAnswerResult('B')"></button></div>
-                <div class="options" ><button id="optionC" onclick="checkAnswerResult('C')"></button></div>
-                <div class="options" ><button id="optionD" onclick="checkAnswerResult('D')"></button></div>
-            </div> 
-            <div id="answerImg"></div>
+          <div id="question"></div>
+          <div class="quesOptions container">
+            <div class="options">
+              <button
+                id="optionA"
+                class="optionBtn"
+                onclick="checkAnswerResult('A')"
+              ></button>
+            </div>
+            <div class="options">
+              <button
+                id="optionB"
+                class="optionBtn"
+                onclick="checkAnswerResult('B')"
+              ></button>
+            </div>
+            <div class="options">
+              <button
+                id="optionC"
+                class="optionBtn"
+                onclick="checkAnswerResult('C')"
+              ></button>
+            </div>
+            <div class="options">
+              <button
+                id="optionD"
+                class="optionBtn"
+                onclick="checkAnswerResult('D')"
+              ></button>
+            </div>
+          </div>
+          <div id="answerImg"></div>
         </div>
+      </div>
     </div>
-</div>
 
-
-<!--Results-->
-<div id="resultsCont" class="container">
-    <div class="results">
+    <!--Results-->
+    <div id="resultsCont" class="container">
+      <div class="results">
         <h3>You've completed the quiz!</h3>
         <p>Your score is <span id="scoreDisplay"></span> out of 5</p>
-        <img id="completeImg" class="completeImg" alt="https://media.giphy.com/media/HBMCmtsPEUShG/giphy.gif">
+        <img
+          id="completeImg"
+          class="completeImg"
+          alt="https://media.giphy.com/media/HBMCmtsPEUShG/giphy.gif"
+        />
         <div>
-            <button id="restartBtn" class="restart" onclick="restartQuiz()">Retake Quiz</button>
+          <button id="restartBtn" class="restart" onclick="restartQuiz()">
+            Retake Quiz
+          </button>
         </div>
+      </div>
     </div>
-</div>
 
-
-<script src="./script.js"></script>
-    
-</body>
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
