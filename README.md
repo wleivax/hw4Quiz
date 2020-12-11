@@ -1,7 +1,7 @@
 # hw4Quiz
 Homework #4 Quiz
 
-https://wleivax.github.io/hw4Quiz/ 
+https://wleivax.github.io/hw4Quiz/Index 
 
 Homework #4 Quiz
 
